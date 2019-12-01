@@ -1,0 +1,29 @@
+{
+  "name": "frp",
+  "version": "0.27.1",
+  "slug": "frp",
+  "description": "A fast reverse proxy to help you expose a local server behind a NAT or firewall to the internet.",
+  "url": "https://github.com/fatedier/frp",
+  "startup": "application",
+  "boot": "auto",
+  "image": "hassmart/{arch}-addon-frp",
+  "host_network": true,
+  "arch": ["armhf", "amd64", "i386"],
+  "options": {
+    "server_addr": null,
+    "token": null,
+    "server_port": "5443",
+    "local_port": "8123",
+    "remote_port": "8080",
+    "subdomain": null
+  },
+  "schema": {
+    "server_addr": "str",
+    "token": "str",
+    "server_port": "str",
+    "proxy_name": "str?",
+    "local_port": "str",
+    "remote_port": "str",
+    "subdomain": "str"
+  }
+}
