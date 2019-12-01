@@ -15,7 +15,8 @@
     "server_port": "5443",
     "local_port": "8123",
     "remote_port": "8080",
-    "subdomain": null
+    "subdomain": null,
+    "custom_domains": null
   },
   "schema": {
     "server_addr": "str",
@@ -24,6 +25,7 @@
     "proxy_name": "str?",
     "local_port": "str",
     "remote_port": "str",
-    "subdomain": "str"
+    "subdomain": "str",
+    "custom_domains": "str"
   }
 }
