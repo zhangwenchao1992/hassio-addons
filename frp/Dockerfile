@@ -5,7 +5,7 @@ MAINTAINER sevenxiaoyu1992 <878829744@qq.com>
 ENV LANG C.UTF-8
 
 ARG BUILD_ARCH
-ARG FRP_VERSION=0.27.1
+ARG FRP_VERSION=0.27.0
 ARG FRP_ARCH="arm"
 RUN apk update \
      && apk add --no-cache jq wget curl
