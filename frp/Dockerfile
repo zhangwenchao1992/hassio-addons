@@ -14,10 +14,10 @@ RUN set -x \
     && if [ $BUILD_ARCH == "armhf" ]; then FRP_ARCH="arm"; fi \
     && if [ $BUILD_ARCH == "amd64" ]; then FRP_ARCH="amd64"; fi \
     && if [ $BUILD_ARCH == "i386" ]; then FRP_ARCH="386"; fi \
-    && URL_VERSION="https://raw.githubusercontent.com/zhangwenchao1992/hassio-addons/master/version.json" \
+    && URL_VERSION=0.27.0 \
     && FRP_VERSION=$(curl -s $URL_VERSION | jq -e -r '.frp') \
     && wget https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz \
-    && tar -zxf frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz \
+    && tar -xzvf frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz \
     && mv frp_${FRP_VERSION}_linux_${FRP_ARCH} /var/frp \
     && mkdir -p /var/frp/conf
 
