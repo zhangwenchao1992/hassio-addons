@@ -15,7 +15,7 @@ RUN set -x \
     && if [ $BUILD_ARCH == "amd64" ]; then FRP_ARCH="amd64"; fi \
     && if [ $BUILD_ARCH == "i386" ]; then FRP_ARCH="386"; fi \
     && URL_VERSION=0.27.0 \
-    && FRP_VERSION=$(curl -s $URL_VERSION | jq -e -r '.frp') \
+    && FRP_VERSION=0.27.0 \
     && wget https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz \
     && tar -xzvf frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz \
     && mv frp_${FRP_VERSION}_linux_${FRP_ARCH} /var/frp \
